@@ -1,15 +1,15 @@
-import logo from '../assets/logo.png'
-import ChangeButton from './ChangeButton'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-  return ( 
-  <header className='flex text-xl sticky top-0 shadow-xl shadow-slat-400 bg-stone-200 px-8 py-4 items-end justify-between'>
-    <a href="/">
-        <img className='h-16 px-2' src={logo} alt="Logo do site" />
-    </a>
-    <ChangeButton/>
-  </header>
+export default function Header() {
+  return (
+    <header className="bg-gray-800 text-white p-4 flex justify-between">
+      <h1 className="text-xl font-bold">Reserva Salões</h1>
+      <nav>
+        <Link to="/" className="mr-4 hover:underline">Home</Link>
+        <Link to="/cadastro" className="mr-4 hover:underline">Cadastro</Link>
+        <Link to="/login" className="hover:underline">Login</Link>
+      </nav>
+    </header>
   )
 }
-
-export default Header
