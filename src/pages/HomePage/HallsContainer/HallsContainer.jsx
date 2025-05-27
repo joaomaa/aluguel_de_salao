@@ -12,7 +12,7 @@ export default function HallsContainer() {
   return (
     <section className="container flex flex-wrap mx-auto p-10 justify-center gap-10">
       {halls.length === 0 ? (
-        <p className="text-gray-600">Nenhum salão disponível. <br /> Se cadastre, faça login e adicione seus salões de festa como locatário.</p>
+        <p className="text-gray-600">Nenhum salão disponível. <br /> Se cadastre, faça Login e adicione seus salões de festa como locatário.</p>
       ) : (
         halls.map((product) => (
           <HallCard key={product._id} id={product._id} {...product} />
